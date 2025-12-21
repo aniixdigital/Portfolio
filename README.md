@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Animesh Prajapati | Digital Marketing Portfolio
 
-## Getting Started
+Your personal portfolio website to showcase your digital marketing expertise, web development projects, graphic design work, and advertisement campaigns.
 
-First, run the development server:
+🌐 **Live Site:** [aniixdigital.in](https://aniixdigital.in)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 What's Included
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home Page** - Hero section with animated intro and featured work
+- **About Page** - Your professional background and skills
+- **Projects Page** - Showcase of your portfolio work with interactive carousel
+- **Reviews Page** - Client testimonials and feedback
+- **Resume Page** - PDF resume viewer
+- **Contact Page** - Contact form for inquiries
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎛️ Managing Your Content
 
-To learn more about Next.js, take a look at the following resources:
+Your website uses **Sanity CMS** - a simple content management system where you can update your portfolio without touching any code.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Accessing the CMS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Go to: `your-domain.com/studio`
+2. Log in with your Sanity account credentials
 
-## Deploy on Vercel
+### What You Can Edit
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Content Type | What It Controls |
+|--------------|------------------|
+| **Projects** | Your portfolio work - add images, descriptions, links |
+| **Testimonials** | Client reviews displayed on your site |
+| **Contact** | Your contact information |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding a New Project
+
+1. Open Sanity Studio (`/studio`)
+2. Click **Projects** in the sidebar
+3. Click the **+** button to create new
+4. Fill in the project details and upload images
+5. Click **Publish** to make it live
+
+### Adding a Testimonial
+
+1. Open Sanity Studio (`/studio`)
+2. Click **Testimonials** in the sidebar
+3. Click the **+** button to create new
+4. Add client name, review text, and photo
+5. Click **Publish** to make it live
+
+---
+
+## 📞 Support
+
+For any website updates, technical issues, or new feature requests, please contact your developer:
+
+**Developer:** Ayush Kumar
+
+---
+
+**© 2025 Animesh Prajapati. All rights reserved.**
+
+**Developed by Ayush Kumar**
