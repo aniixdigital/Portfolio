@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body .font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.service-btn-selected {
+  background-color: #813e0a;
+  color: #FFECB6;
+  scale: 1.1;
+}
+
+/* Swiper Custom Styles */
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev,
+.testimonials-swiper .swiper-button-next,
+.testimonials-swiper .swiper-button-prev {
+  color: #FD853A;
+  background: rgba(26, 26, 26, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.projects-swiper .swiper-button-next::after,
+.projects-swiper .swiper-button-prev::after,
+.testimonials-swiper .swiper-button-next::after,
+.testimonials-swiper .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+.projects-swiper .swiper-pagination-bullet,
+.testimonials-swiper .swiper-pagination-bullet {
+  background: #666;
+  opacity: 1;
+}
+
+.projects-swiper .swiper-pagination-bullet-active,
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: #FD853A;
+}
