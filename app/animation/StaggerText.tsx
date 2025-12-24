@@ -26,25 +26,26 @@ export default function StaggerText({ text, segments, className = '', staggerTyp
     if (!containerRef.current) return
 
     const elements = containerRef.current.querySelectorAll('.stagger-item')
+    const isMobile = window.innerWidth < 640
 
     gsap.fromTo(
       elements,
       {
         opacity: 0,
-        y: 50,
-        rotateX: -90,
+        y: isMobile ? 20 : 50,
+        rotateX: isMobile ? 0 : -90,
       },
       {
         opacity: 1,
         y: 0,
         rotateX: 0,
-        duration: 0.8,
-        stagger: 0.05,
-        ease: 'back.out(1.7)',
+        duration: isMobile ? 0.4 : 0.8,
+        stagger: isMobile ? 0.03 : 0.05,
+        ease: isMobile ? 'power2.out' : 'back.out(1.7)',
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top 80%',
-          toggleActions: 'play none none reverse',
+          toggleActions: isMobile ? 'play none none none' : 'play none none reverse',
         },
       }
     )

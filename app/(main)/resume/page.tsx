@@ -1,11 +1,16 @@
 import React from 'react'
 import ResumeViewer from '../../components/ui/ResumeViewer'
+import StaggerText from '@/app/animation/StaggerText'
 
 
 const Resume = () => {
   return (
     <div>
-      <h1 className='pt-28 pb-8 text-yellow-600 text-center text-7xl font-bold'>Resume</h1>
+      <StaggerText
+                  text="Resume"
+                  className="text-5xl sm:text-7xl text-center font-bold text-[#FFECB6] pt-28 mb-8"
+                  staggerType="chars"
+                />
       <ResumeViewer />
     </div>
   )

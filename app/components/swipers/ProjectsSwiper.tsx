@@ -29,10 +29,10 @@ export default function ProjectsSwiper({ projects }: ProjectsSwiperProps) {
           slidesPerView: 3,
         },
       }}
-      className="projects-swiper !pb-12"
+      className="projects-swiper pb-12!"
     >
       {projects.map((project) => (
-        <SwiperSlide key={project._id} className="rounded-2xl overflow-hidden p-8">
+        <SwiperSlide key={project._id} className="rounded-2xl overflow-hidden sm:p-8">
           <Project project={project} />
         </SwiperSlide>
       ))}

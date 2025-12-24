@@ -17,9 +17,9 @@ export default function Footer() {
 				<div className="space-y-3">
 					<h4 className="text-sm font-semibold tracking-wide text-[#f39c12] uppercase">Contact</h4>
 					<div className="text-sm text-[#c8b98a] space-y-1">
-						<p>info@animeshmarketing.com</p>
-						<p>+91 98765 43210</p>
-						<p>Mumbai · Remote worldwide</p>
+						<p>aniixdigital@gmail.com</p>
+						<p>+91 6209328157</p>
+						<p>Bokaro, Jharkhand INDIA · Remote worldwide</p>
 					</div>
 				</div>
 
@@ -31,17 +31,16 @@ export default function Footer() {
 
 			</div>
 
-			{/* Bottom credit bar separated by line */}
 			<div className="border-t border-white/10">
 				<div className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center justify-between gap-3">
 					<p className="text-sm text-[#c8b98a]">© {year} Animesh Prajapati. All rights reserved.</p>
 					<p className="text-sm text-[#c8b98a]">
 						Made by
 						<a
-							href="https://www.linkedin.com/in/ayush/"
+							href="https://www.linkedin.com/in/ayush-kumar-772865290/"
 							target="_blank"
 							rel="noreferrer"
-							className="ml-2 font-semibold text-[#c8b98a] hover:text-orange-400 transition-colors"
+							className="ml-2 font-semibold text-[#d0bd86] hover:text-orange-400 transition-colors"
 						>
 							Ayush Kumar
 						</a>

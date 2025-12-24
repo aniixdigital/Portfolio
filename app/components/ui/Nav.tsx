@@ -55,35 +55,41 @@ const Nav = () => {
   })
 
   const toggleMobileMenu = () => {
-    if (!mobileMenuRef.current) return
-
     if (!isMobileMenuOpen) {
       // Open menu
       setIsMobileMenuOpen(true)
-      gsap.fromTo(mobileMenuRef.current,
-        { x: '100%', opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.4, ease: 'power3.out' }
-      )
-      // Stagger menu items
-      gsap.fromTo('.mobile-menu-item',
-        { x: 50, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.3, stagger: 0.1, delay: 0.2, ease: 'power2.out' }
-      )
+      // Use setTimeout to ensure state is updated and ref is available
+      setTimeout(() => {
+        if (!mobileMenuRef.current) return
+        gsap.fromTo(mobileMenuRef.current,
+          { x: '100%', opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.4, ease: 'power3.out' }
+        )
+        // Stagger menu items
+        gsap.fromTo('.mobile-menu-item',
+          { x: 50, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.3, stagger: 0.1, delay: 0.2, ease: 'power2.out' }
+        )
+      }, 0)
     } else {
       // Close menu
-      gsap.to(mobileMenuRef.current, {
-        x: '100%',
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power3.in',
-        onComplete: () => setIsMobileMenuOpen(false)
-      })
+      if (mobileMenuRef.current) {
+        gsap.to(mobileMenuRef.current, {
+          x: '100%',
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power3.in',
+          onComplete: () => setIsMobileMenuOpen(false)
+        })
+      } else {
+        setIsMobileMenuOpen(false)
+      }
     }
   }
 
   return (
     <>
-      <div id='navbar' className='w-full flex sm:justify-center justify-end fixed z-50'>
+      <div id='navbar' className='w-full flex sm:justify-center justify-end fixed z-50 top-0'>
 
         {/* Desktop Navigation */}
         <div className="w-[60%] sm:flex hidden bg-[#D0CC9E] shadow-md h-max justify-between rounded-full p-2 px-3 mt-4">
@@ -112,7 +118,7 @@ const Nav = () => {
         {/* Mobile Hamburger Button */}
         <button 
           onClick={toggleMobileMenu}
-          className='sm:hidden block mr-6 mt-5 z-50 relative'
+          className='sm:hidden block mr-6 mt-5 p-2 bg-[#0f1620]/50 rounded-lg z-50'
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
@@ -124,17 +130,16 @@ const Nav = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          ref={mobileMenuRef}
-          className="fixed top-0 right-0 h-screen w-[70%] bg-[#0f1620] shadow-2xl z-40 sm:hidden"
-          style={{ opacity: 0, transform: 'translateX(100%)' }}
-        >
+      <div
+        ref={mobileMenuRef}
+        className={`fixed top-0 right-0 h-screen w-[70%] bg-[#0f1620] shadow-2xl z-40 sm:hidden ${!isMobileMenuOpen ? 'pointer-events-none' : ''}`}
+        style={{ opacity: 0, transform: 'translateX(100%)' }}
+      >
           <div className="flex flex-col items-start justify-center h-full px-8 space-y-8">
             <Link 
               href="/" 
               onClick={toggleMobileMenu}
-              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg ${
+              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg w-full ${
                 pathname === '/' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
               }`}
             >
@@ -143,25 +148,25 @@ const Nav = () => {
             <Link 
               href="/about" 
               onClick={toggleMobileMenu}
-              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg ${
+              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg w-full ${
                 pathname === '/about' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
               }`}
             >
               About
             </Link>
             <Link 
-              href="/services" 
+              href="/projects" 
               onClick={toggleMobileMenu}
-              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg ${
-                pathname === '/services' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
+              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg w-full ${
+                pathname === '/projects' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
               }`}
             >
-              Services
+              Projects
             </Link>
             <Link 
               href="/resume" 
               onClick={toggleMobileMenu}
-              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg ${
+              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg w-full ${
                 pathname === '/resume' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
               }`}
             >
@@ -170,7 +175,7 @@ const Nav = () => {
             <Link 
               href="/contact" 
               onClick={toggleMobileMenu}
-              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg ${
+              className={`mobile-menu-item text-2xl font-semibold transition-colors px-4 py-2 rounded-lg w-full ${
                 pathname === '/contact' ? 'bg-[#FD853A] text-white' : 'text-[#FFECB6] hover:text-[#FD853A]'
               }`}
             >
@@ -178,7 +183,6 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-      )}
     </>
   )
 }

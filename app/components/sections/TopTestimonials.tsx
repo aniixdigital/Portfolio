@@ -20,12 +20,9 @@ export default async function TopTestimonials() {
   const averageRating = stats.averageRating ? stats.averageRating.toFixed(1) : '0'
 
   return (
-    <div className="py-16 px-8 relative"
+    <div className="py-16 px-8 relative bg-cover bg-center sm:bg-fixed"
       style={{
         backgroundImage: "url('/screenbg.svg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
       }}>
       <div className="absolute inset-0 bg-[#0f1620]/20 pointer-events-none"></div>
       <div className="max-w-7xl mx-auto relative z-10">
@@ -38,12 +35,12 @@ export default async function TopTestimonials() {
           />
 
           {stats.totalReviews > 0 && (
-            <div className="flex items-center justify-between gap-4">
-              <div className="bg-[#1a1a1a] rounded-2xl px-4 sm:px-8 py-4 inline-flex items-center gap-4">
+            <div className="flex items-center justify-between gap-4 text-[10px] sm:text-sm md:text-base">
+              <div className="bg-[#1a1a1a] rounded-2xl px-2 sm:px-8 py-4 inline-flex items-center gap-4">
                 <div className="text-center">
                   <div className="flex items-center gap-1 justify-center">
-                    <span className="text-2xl sm:text-4xl font-bold text-[#FD853A]">{averageRating}</span>
-                    <span className="text-xl sm:text-2xl text-gray-400">/5</span>
+                    <span className="text-[16px] sm:text-4xl font-bold text-[#FD853A]">{averageRating}</span>
+                    <span className="text-xs sm:text-2xl text-gray-400">/5</span>
                   </div>
                   <div className="flex gap-1 mt-1 justify-center">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -51,8 +48,8 @@ export default async function TopTestimonials() {
                         key={star}
                         className={
                           star <= Math.round(stats.averageRating || 0)
-                            ? 'text-[#FD853A] text-lg sm:text-xl'
-                            : 'text-gray-600 text-lg sm:text-xl'
+                            ? 'text-[#FD853A] text-xs sm:text-xl'
+                            : 'text-gray-600 text-xs sm:text-xl'
                         }
                       >
                         ★
@@ -60,9 +57,9 @@ export default async function TopTestimonials() {
                     ))}
                   </div>
                 </div>
-                <div className="border-l border-gray-700 pl-4">
+                <div className="border-l border-gray-700 sm:pl-4 pl-2">
                   <p className="text-gray-400 text-xs sm:text-sm">Based on</p>
-                  <p className="text-white font-semibold text-sm sm:text-base">
+                  <p className="text-white font-semibold text-xs sm:text-base">
                     {stats.totalReviews} review{stats.totalReviews !== 1 ? 's' : ''}
                   </p>
                 </div>
@@ -70,10 +67,10 @@ export default async function TopTestimonials() {
               
               <Link 
                 href="/reviews" 
-                className="cursor-pointer flex p-3 px-6 rounded-full bg-[#FD853A] hover:bg-[#ff9b59] text-[#0f1620] font-bold justify-center items-center gap-2 transition-colors"
+                className="cursor-pointer flex sm:p-3 sm:px-6 px-4 p-2 rounded-full bg-[#FD853A] hover:bg-[#ff9b59] text-[#0f1620] font-bold justify-center items-center gap-2 transition-colors"
               >
                 <RiFeedbackFill />
-                Give Feedback
+                Give Review
               </Link>
             </div>
           )}

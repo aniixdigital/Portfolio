@@ -24,21 +24,24 @@ export default function EmailForm() {
             <input type="hidden" name="tf" value="1" />
             <input type="hidden" name="to" value="info@animeshmarketing.com" />
             <input type="hidden" name="su" value="Let&apos;s Work Together" />
-            <label className="sr-only" htmlFor="footer-email">Your message or email</label>
-            <input
-                id="footer-email"
-                name="body"
-                type="text"
-                placeholder="Share your email or a quick note"
-                required
-                className="flex-1 rounded-lg bg-white/5 border border-orange-500/20 px-4 py-3 text-sm text-white placeholder:text-[#c8b98a] focus:outline-none focus:border-[#FD853A] focus:ring-2 focus:ring-[#FD853A]/40"
-            />
-            <button
-                type="submit"
-                className="rounded-lg bg-[#FD853A] text-[#0f1620] px-5 py-3 text-sm font-semibold hover:bg-[#ff9b59] transition-colors"
-            >
-                <RiSendPlane2Fill/>
-            </button>
+            <div className="flex gap-2 flex-1">
+
+                <label className="sr-only" htmlFor="footer-email">Your message or email</label>
+                <input
+                    id="footer-email"
+                    name="body"
+                    type="text"
+                    placeholder="Share your email or a quick note"
+                    required
+                    className="flex-1 rounded-lg bg-white/5 border border-orange-500/20 px-4 py-3 text-sm text-white placeholder:text-[#c8b98a] focus:outline-none focus:border-[#FD853A] focus:ring-2 focus:ring-[#FD853A]/40"
+                />
+                <button
+                    type="submit"
+                    className="rounded-lg bg-[#FD853A] text-[#0f1620] px-5 py-3 text-sm font-semibold hover:bg-[#ff9b59] transition-colors"
+                >
+                    <RiSendPlane2Fill />
+                </button>
+            </div>
         </form>
     );
 }

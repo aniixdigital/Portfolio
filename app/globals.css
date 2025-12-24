@@ -16,10 +16,11 @@ body .font-poppins {
 .testimonials-swiper .swiper-button-next,
 .testimonials-swiper .swiper-button-prev {
   color: #FD853A;
-  background: rgba(26, 26, 26, 0.8);
+  background: rgba(175, 153, 135, 0.383);
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  padding: 8px;
 }
 
 .projects-swiper .swiper-button-next::after,
@@ -31,7 +32,7 @@ body .font-poppins {
 
 .projects-swiper .swiper-pagination-bullet,
 .testimonials-swiper .swiper-pagination-bullet {
-  background: #666;
+  background: #666666;
   opacity: 1;
 }
 

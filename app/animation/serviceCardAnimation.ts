@@ -8,6 +8,9 @@ export function serviceCardAnimation(e: React.MouseEvent<HTMLButtonElement>) {
   const btn = document.querySelector(".service-btn-selected")
   const tl = gsap.timeline()
   const id = Number((e.currentTarget as HTMLElement).id); //togohere
+  // const activeCard=document.querySelector(".active-card")
+  // activeCard?.classList.remove("active-card")
+  // document.getElementsByClassName(`card${id}`)[0].classList.add("active-card")
   const len = 4;
   const queue = [1, 2, 3, 4]
 
