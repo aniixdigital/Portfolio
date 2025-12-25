@@ -1,4 +1,4 @@
-# Animesh Prajapati | Digital Marketing Portfolio
+# Animesh Kumar | Digital Marketing Portfolio
 
 Your personal portfolio website to showcase your digital marketing expertise, web development projects, graphic design work, and advertisement campaigns.
 
@@ -60,6 +60,6 @@ For any website updates, technical issues, or new feature requests, please conta
 
 ---
 
-**© 2025 Animesh Prajapati. All rights reserved.**
+**© 2025 Animesh Kumar. All rights reserved.**
 
 **Developed by Ayush Kumar**
