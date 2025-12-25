@@ -56,8 +56,8 @@ export default async function Contact() {
     whatsapp: '+916209328157',
     socialLinks: [
       { platform: 'instagram', username: '@aniixdigital', url: 'https://www.instagram.com/aniixdigital' },
-      { platform: 'facebook', username: 'aniixdigital', url: 'https://www.facebook.com/aniixdigital' },
-      { platform: 'linkedin', username: 'aniixdigital', url: 'https://www.linkedin.com/in/aniixdigital' },
+      { platform: 'facebook', username: 'Aniixdigital', url: 'https://www.facebook.com/share/1BDG9W74Em/?mibextid=wwXIfr' },
+      { platform: 'linkedin', username: 'Animesh Kumar', url: 'https://www.linkedin.com/in/animesh-kumar-a60a78307' },
     ],
     ctaTitle: 'Ready to Start Your Project?',
     ctaDescription: "Feel free to reach out through any channel. I'll get back to you as soon as possible.",
