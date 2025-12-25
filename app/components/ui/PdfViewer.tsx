@@ -17,31 +17,16 @@ export default function PDFViewer({ file = "/resume.pdf" }) {
 
   return (
     <div className="w-full flex flex-col items-center my-4 mb-12">
-      <Document file={file} onLoadSuccess={onLoadSuccess}>
-        <Page pageNumber={page} scale={1.2} width={595} height={842} />
-      </Document>
-
-      {/* <div className="mt-6 flex gap-4 items-center justify-center">
-        <button
-          onClick={() => setPage((p) => Math.max(p - 1, 1))}
-          className="bg-[#FD853A] hover:bg-[#d97a2b] text-white font-semibold py-2 px-4 rounded-full shadow transition-colors duration-200 disabled:opacity-50"
-          disabled={page === 1}
-        >
-          Previous
-        </button>
-
-        <span className="text-[#FFECB6] font-poppins text-lg">
-          Page {page} of {numPages}
-        </span>
-
-        <button
-          onClick={() => setPage((p) => Math.min(p + 1, numPages))}
-          className="bg-[#FD853A] hover:bg-[#d97a2b] text-white font-semibold py-2 px-4 rounded-full shadow transition-colors duration-200 disabled:opacity-50"
-          disabled={page === numPages || numPages === 0}
-        >
-          Next
-        </button>
-      </div> */}
+      <div className="w-full max-w-[700px] px-2 sm:px-0">
+        <Document file={file} onLoadSuccess={onLoadSuccess}>
+          <Page
+            pageNumber={page}
+            width={typeof window !== 'undefined' ? Math.min(window.innerWidth - 32, 700) : 700}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+          />
+        </Document>
+      </div>
     </div>
   );
 }

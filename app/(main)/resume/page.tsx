@@ -25,7 +25,7 @@ const Resume = () => {
         className="text-5xl sm:text-7xl text-center font-bold text-[#FFECB6] pt-28 mb-8"
         staggerType="chars"
       />
-      <div className="flex justify-end mb-6 mr-8">
+      <div className="flex sm:justify-end justify-center mb-6 mr-8">
         <a
           href="/resume.pdf"
           download="AnimeshKumar_resume.pdf"
