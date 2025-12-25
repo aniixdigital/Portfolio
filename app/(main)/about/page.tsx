@@ -50,8 +50,16 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 export const metadata: Metadata = {
-  title: "About Animesh | Digital Marketing & Web Developer",
-  description: "Learn about Animesh's journey in digital marketing, web development, and creative services. Experienced in helping businesses grow online.",
+  title: "About Me",
+  description: "Learn about Animesh Kumar's journey in digital marketing and web development. 3+ years of experience, 50+ projects, and 30+ happy clients. Expert in SEO, React, Next.js, and creative design.",
+  openGraph: {
+    title: "About Animesh Kumar | Digital Marketing & Web Development Expert",
+    description: "Discover the story behind Animesh Kumar - a passionate digital marketer and web developer helping businesses thrive online.",
+    url: "/about",
+  },
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function About() {

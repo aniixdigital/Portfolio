@@ -5,8 +5,16 @@ import StaggerText from '@/app/animation/StaggerText'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "My Projects | Portfolio - Animesh",
-  description: "Browse Animesh's complete portfolio across web development, digital marketing, graphic design, and advertisement services. 50+ completed projects.",
+  title: "Projects",
+  description: "Explore Animesh Kumar's portfolio of 50+ completed projects across web development, digital marketing, graphic design, and advertisement. See real results and case studies.",
+  openGraph: {
+    title: "Projects | Animesh Kumar Portfolio",
+    description: "Browse 50+ successful projects in web development, digital marketing, graphic design, and advertisement. Quality work with proven results.",
+    url: "/projects",
+  },
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 interface QueryResult {

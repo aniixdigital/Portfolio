@@ -50,8 +50,8 @@ export default function Services() {
             </div>
             <div className="w-full h-full relative font-poppins">
 
-                <ServiceCard className="card card1 top-24 z-40 scale-100 bg-[#ffb384] opacity-100 text-gray-900/80" id="service1" service="Digital Marketing" description="Data-driven campaigns to grow reach, leads, and retention across channels" 
-                serviceType="SEO, Content, Email, Social Media, Automation">
+                <ServiceCard className="card card1 top-24 z-40 scale-100 bg-[#ffb384] opacity-100 text-gray-900/80" id="service1" service="Digital Marketing" description="Data-driven campaigns to grow reach, leads, and retention across channels. All types of marketing services listed below -" 
+                serviceType="Affiliate, Content, Email, Mobile, Influencer">
                     <Image
                         src={"/digi_market.png"}
                         alt="service pic"
@@ -62,7 +62,7 @@ export default function Services() {
                 </ServiceCard>
                 <ServiceCard className="card card2 top-16 z-30 scale-90 bg-[#af6d3a] opacity-90 text-white/80" id="service2" service="Advertisement" 
                 description="High-converting ad creatives and media buying across search, social, and display"
-                serviceType="Google Ads, Meta Ads, YouTube Ads">
+                serviceType="Google Ads, Meta Ads, YouTube Ads, Video Ads, Reels Ads">
                     <Image
                         src={"/ads.png"}
                         alt="service pic"

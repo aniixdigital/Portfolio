@@ -70,7 +70,7 @@ export default function HomeClient({ children }: { children: React.ReactNode }) 
   return (
     <>
       <div id="container">
-        <div className="w-full h-screen landing relative">
+        <div className="w-full h-dvh landing relative">
           <div className="w-full relative text-center pt-22 font-bold tracking-tight leading-26 sm:text-[6rem] text-[3rem] text-[#FFECB6]">
             <div className=" flex sm:flex-row flex-col justify-center items-center leading-20 sm:gap-4 gap-0 sm:text-[6rem] text-[4rem] mt-2 sm:mt-4 text-[#FFECB6]">
               <span>I&apos;m</span> <span className="text-[#FD853A] sm:text-[6rem] text-[4.5rem]">Animesh</span>

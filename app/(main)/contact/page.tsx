@@ -6,8 +6,16 @@ import { contactQuery } from '@/sanity/lib/queries';
 import { IconType } from 'react-icons';
 
 export const metadata: Metadata = {
-  title: "Contact Animesh | Digital Marketing | Web Development & Creative Design",
-  description: "Get in touch with Animesh for your next digital marketing or web development project. Available on WhatsApp, email, LinkedIn, and more.",
+  title: "Contact",
+  description: "Get in touch with Animesh Kumar for digital marketing, web development, or creative design projects. Available on WhatsApp, email, LinkedIn, and social media.",
+  openGraph: {
+    title: "Contact Animesh Kumar | Let's Work Together",
+    description: "Ready to start your project? Contact Animesh via WhatsApp, email, or social media. Quick response guaranteed!",
+    url: "/contact",
+  },
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 interface SocialLink {
