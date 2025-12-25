@@ -6,7 +6,7 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true, // Disable CDN for fresh content
+  useCdn: false, // Disable CDN for fresh content
 })
 
 // Write client for mutations (server-side only)
