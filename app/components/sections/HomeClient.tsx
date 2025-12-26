@@ -71,12 +71,16 @@ export default function HomeClient({ children }: { children: React.ReactNode }) 
       });
     }
 
-    // Defer animations until all content and images are loaded
-    if (document.readyState === 'complete') {
-      setTimeout(runAnimations, 100); // slight delay to ensure images are painted
-    } else {
-      window.addEventListener('load', () => setTimeout(runAnimations, 100));
-    }
+    runAnimations();
+    window.addEventListener("resize", () => {
+      ScrollTrigger.refresh();
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        ScrollTrigger.refresh();
+      });
+    };
+    
   }, []);
 
   return (

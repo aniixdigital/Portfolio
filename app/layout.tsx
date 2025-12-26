@@ -11,7 +11,7 @@ const urbanist = Urbanist({
 });
 
 const poppins= Poppins({
-  weight: ['400','600','700'],
+  weight: ['300','400','600','700'],
   variable: "--font-poppins",
   subsets: ['latin'],
   display: 'swap',
