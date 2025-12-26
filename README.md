@@ -2,7 +2,7 @@
 
 Your personal portfolio website to showcase your digital marketing expertise, web development projects, graphic design work, and advertisement campaigns.
 
-🌐 **Live Site:** [aniixdigital.in](https://aniixdigital.in)
+🌐 **Live Site:** [aniixdigital.com](https://aniixdigital.com)
 
 ---
 
@@ -23,7 +23,7 @@ Your website uses **Sanity CMS** - a simple content management system where you 
 
 ### Accessing the CMS
 
-1. Go to: `your-domain.com/studio`
+1. Go to: [aniixdigital.sanity.studio](https://aniixdigital.sanity.studio)
 2. Log in with your Sanity account credentials
 
 ### What You Can Edit
@@ -36,7 +36,7 @@ Your website uses **Sanity CMS** - a simple content management system where you 
 
 ### Adding a New Project
 
-1. Open Sanity Studio (`/studio`)
+1. Open Sanity Studio ([aniixdigital.sanity.studio](https://aniixdigital.sanity.studio))
 2. Click **Projects** in the sidebar
 3. Click the **+** button to create new
 4. Fill in the project details and upload images
@@ -44,7 +44,7 @@ Your website uses **Sanity CMS** - a simple content management system where you 
 
 ### Adding a Testimonial
 
-1. Open Sanity Studio (`/studio`)
+1. Open Sanity Studio ([aniixdigital.sanity.studio](https://aniixdigital.sanity.studio))
 2. Click **Testimonials** in the sidebar
 3. Click the **+** button to create new
 4. Add client name, review text, and photo
