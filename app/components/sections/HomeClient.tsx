@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Services from "./Services";
@@ -9,68 +9,80 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeClient({ children }: { children: React.ReactNode }) {
   useGSAP(() => {
-    const isMobile = window.innerWidth < 640;
-    
-    // will-change and transform for GPU acceleration
-    gsap.set(".landing, .services-section, .card", {
-      willChange: "transform, opacity",
-    });
+    function runAnimations() {
+      const isMobile = window.innerWidth < 640;
+      // will-change and transform for GPU acceleration
+      gsap.set(".landing, .services-section, .card", {
+        willChange: "transform, opacity",
+      });
 
-    gsap.to(".landing", {
-      scale: 0.80,
-      opacity: 0,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#container",
-        start: "top 0%",
-        end: "top -100%",
-        scrub: isMobile ? 0.3 : 0.5,
-        pin: true,
-        pinSpacing: false,
-      },
-    });
+      gsap.to(".landing", {
+        scale: 0.80,
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#container",
+          start: "top 0%",
+          end: "top -100%",
+          scrub: isMobile ? 0.3 : 0.5,
+          pin: true,
+          pinSpacing: false,
+        },
+      });
 
-    gsap.fromTo(".services-section", { opacity: 0.7, scale: 0.9, borderRadius: "40px" }, {
-      opacity: 1,
-      scale: 1,
-      borderRadius: "0px",
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".services-section",
-        start: "top 100%",
-        end: "top 20%",
-        scrub: isMobile ? 0.3 : 0.5,
-      },
-    });
-
-    // Animate each card from opacity 0 to its original opacity
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card) => {
-      const computedStyle = window.getComputedStyle(card);
-      const originalOpacity = parseFloat(computedStyle.opacity) || 1;
-      
-      gsap.fromTo(card, 
-        { y: isMobile ? 50 : 100, opacity: 0 }, 
+      gsap.fromTo(
+        ".services-section",
+        { opacity: 0.7, scale: 0.9, borderRadius: "40px" },
         {
-          y: 0,
-          opacity: originalOpacity,
-          ease: isMobile ? "power2.out" : "none",
-          stagger: isMobile ? 0.2 : 0,
+          opacity: 1,
+          scale: 1,
+          borderRadius: "0px",
+          ease: "none",
           scrollTrigger: {
             trigger: ".services-section",
-            start: isMobile ? "top 50%" : "top 50%",
-            end: isMobile ? "top 35%" : "top 35%",
-            scrub: isMobile ? 0.2 : 0.5,
+            start: "top 100%",
+            end: "top 20%",
+            scrub: isMobile ? 0.3 : 0.5,
           },
         }
       );
-    });
+
+      // Animate each card from opacity 0 to its original opacity
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card) => {
+        const computedStyle = window.getComputedStyle(card);
+        const originalOpacity = parseFloat(computedStyle.opacity) || 1;
+        gsap.fromTo(
+          card,
+          { y: isMobile ? 50 : 100, opacity: 0 },
+          {
+            y: 0,
+            opacity: originalOpacity,
+            ease: isMobile ? "power2.out" : "none",
+            stagger: isMobile ? 0.2 : 0,
+            scrollTrigger: {
+              trigger: ".services-section",
+              start: isMobile ? "top 50%" : "top 50%",
+              end: isMobile ? "top 35%" : "top 35%",
+              scrub: isMobile ? 0.2 : 0.5,
+            },
+          }
+        );
+      });
+    }
+
+    // Defer animations until all content and images are loaded
+    if (document.readyState === 'complete') {
+      setTimeout(runAnimations, 100); // slight delay to ensure images are painted
+    } else {
+      window.addEventListener('load', () => setTimeout(runAnimations, 100));
+    }
   }, []);
 
   return (
     <>
       <div id="container">
-        <div className="w-full h-dvh landing relative">
+        <div className="w-full h-screen landing relative">
           <div className="w-full relative text-center pt-22 font-bold tracking-tight leading-26 sm:text-[6rem] text-[3rem] text-[#FFECB6]">
             <div className=" flex sm:flex-row flex-col justify-center items-center leading-20 sm:gap-4 gap-0 sm:text-[6rem] text-[4rem] mt-2 sm:mt-4 text-[#FFECB6]">
               <span>I&apos;m</span> <span className="text-[#FD853A] sm:text-[6rem] text-[4.5rem]">Animesh</span>
@@ -97,6 +109,8 @@ export default function HomeClient({ children }: { children: React.ReactNode }) 
             width={450}
             height={450}
             priority
+            fetchPriority="high"
+            sizes="(max-width: 640px) 183px, 450px"
             className="blur-sm sm:w-[450px] sm:h-[450px] w-[125%] h-[60%] absolute bottom-0 left-[50%] -translate-x-1/2 !max-w-none"
           />
           <Image
@@ -105,6 +119,8 @@ export default function HomeClient({ children }: { children: React.ReactNode }) 
             width={450}
             height={450}
             priority
+            fetchPriority="high"
+            sizes="(max-width: 640px) 183px, 450px"
             className="contrast-125 brightness-105 sm:w-[450px] sm:h-[450px] w-[125%] h-[60%] absolute bottom-0 left-[50%] -translate-x-1/2 !max-w-none"
           />
         </div>

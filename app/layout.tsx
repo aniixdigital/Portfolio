@@ -40,12 +40,12 @@ export const metadata: Metadata = {
     "SEO expert",
     "social media marketing",
     "web developer",
-    "React developer",
-    "Next.js developer",
+    "WordPress developer",
+    "Wix developer",
     "freelance developer",
     "advertisement",
     "brand design",
-    "UI/UX design",
+    "logo design",
     "Animesh Kumar",
   ],
   authors: [{ name: "Animesh Kumar", url: siteUrl }],
@@ -129,6 +129,8 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        {/* Preload animesh.webp for faster LCP */}
+        <link rel="preload" as="image" href="/animesh.webp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

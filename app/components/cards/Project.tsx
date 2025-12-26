@@ -34,6 +34,7 @@ export default function Project({ project }: ProjectProps) {
             src={urlFor(project.image).width(400).height(300).url()}
             alt={project.title}
             fill
+            sizes="(max-width: 768px) 100vw, 400px"
             className="object-cover group-hover:scale-110 transition-transform duration-500"
           />
         </div>

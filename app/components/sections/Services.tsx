@@ -35,6 +35,7 @@ export default function Services() {
                 <button 
                     onClick={handleWhatsAppClick}
                     className="p-3 sm:px-4 sm:py-2 self-center text-[0.9rem] sm:text-[1.1rem] text-black bg-[#ffed9f] rounded-full hover:bg-[#f0bb0f] cursor-pointer flex items-center gap-2 transition-colors"
+                    aria-label="Chat on WhatsApp"
                 >
                     <IoChatbubbleEllipsesOutline className="text-xl" />
                     <span className="hidden sm:inline">Let&apos;s Chat</span>
@@ -42,10 +43,10 @@ export default function Services() {
             </div>
             <div className="w-full">
                 <div className="flex items-center justify-center gap-3 sm:gap-6 lg:gap-10 mt-6 sm:mt-10 flex-wrap text-black font-semibold">
-                    <button id="1" disabled={disabledButton === "1"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] service-btn-selected transform transition-all duration-150 hover:scale-110">Marketting</button>
-                    <button id="2" disabled={disabledButton === "2"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110">Advertisement</button>
-                    <button id="3" disabled={disabledButton === "3"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110">Graphic Design</button>
-                    <button id="4" disabled={disabledButton === "4"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110">Web Development</button>
+                    <button id="1" disabled={disabledButton === "1"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] service-btn-selected transform transition-all duration-150 hover:scale-110" aria-label="Show Digital Marketing services">Marketting</button>
+                    <button id="2" disabled={disabledButton === "2"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110" aria-label="Show Advertisement services">Advertisement</button>
+                    <button id="3" disabled={disabledButton === "3"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110" aria-label="Show Graphic Design services">Graphic Design</button>
+                    <button id="4" disabled={disabledButton === "4"} onClick={handleServiceClick} className="service-btn rounded-full bg-[#FD853A] cursor-pointer px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base hover:bg-[#ca6619] transform transition-all duration-150 hover:scale-110" aria-label="Show Web Development services">Web Development</button>
                 </div>
             </div>
             <div className="w-full h-full relative font-poppins">
@@ -53,10 +54,11 @@ export default function Services() {
                 <ServiceCard className="card card1 top-24 z-40 scale-100 bg-[#ffb384] opacity-100 text-gray-900/80" id="service1" service="Digital Marketing" description="Data-driven campaigns to grow reach, leads, and retention across channels. All types of marketing services listed below -" 
                 serviceType="Affiliate, Content, Email, Mobile, Influencer">
                     <Image
-                        src={"/digi_market.png"}
+                        src={"/digi_market.webp"}
                         alt="service pic"
                         width={300}
                         height={300}
+                        sizes="(max-width: 640px) 183px, 300px"
                         className="object-contain w-full h-full"
                     />
                 </ServiceCard>
@@ -64,10 +66,11 @@ export default function Services() {
                 description="High-converting ad creatives and media buying across search, social, and display"
                 serviceType="Google Ads, Meta Ads, YouTube Ads, Video Ads, Reels Ads">
                     <Image
-                        src={"/ads.png"}
+                        src={"/ads.webp"}
                         alt="service pic"
                         width={300}
                         height={300}
+                        sizes="(max-width: 640px) 183px, 300px"
                         className="object-contain w-full h-full"
                     />
                 </ServiceCard>
@@ -76,10 +79,11 @@ export default function Services() {
                 serviceType="Logo Design, Branding, Print Design, Digital Design">
                     
                     <Image
-                        src={"/graphicD.png"}
+                        src={"/graphicD.webp"}
                         alt="service pic"
                         width={300}
                         height={300}
+                        sizes="(max-width: 640px) 183px, 300px"
                         className="object-contain w-full h-full"
                     />
                 </ServiceCard>
@@ -87,10 +91,11 @@ export default function Services() {
                 description="Fast, responsive websites with modern stacks, SEO-friendly and easy to maintain"
                 serviceType="Landing Pages, E-commerce, CMS, No-code Web Apps">
                     <Image
-                        src={"/webDev.png"}
+                        src={"/webDev.webp"}
                         alt="service pic"
                         width={300}
                         height={300}
+                        sizes="(max-width: 640px) 183px, 300px"
                         className="object-contain w-full h-full"
                     />
                 </ServiceCard>

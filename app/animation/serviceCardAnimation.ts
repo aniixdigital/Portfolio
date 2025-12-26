@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import { gsap } from "gsap";
 
 let front: number = 0;
 let rear: number = 3;

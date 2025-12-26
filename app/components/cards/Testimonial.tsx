@@ -33,6 +33,7 @@ export default function Testimonial({ testimonial }: TestimonialProps) {
               src={urlFor(testimonial.image).width(100).height(100).url()}
               alt={testimonial.name}
               fill
+              sizes="56px"
               className="object-cover"
             />
           </div>
