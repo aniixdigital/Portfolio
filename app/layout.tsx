@@ -17,7 +17,7 @@ const poppins= Poppins({
   display: 'swap',
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://animeshprajapati.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -27,13 +27,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteUrl || "https://www.aniixdigital.com"),
   title: {
-    default: "Animesh Kumar | Digital Marketing & Web Development Expert",
-    template: "%s | Animesh Kumar",
+    default: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
+    template: "%s | AniixDigital",
   },
-  description: "Animesh Kumar is a skilled digital marketer and web developer specializing in SEO, social media marketing, web development, graphic design, and advertisement services. Transform your business online.",
+  description: "Aniixdigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.",
   keywords: [
+    "aniixdigital",
     "digital marketing",
     "web development",
     "graphic design",
@@ -42,15 +43,16 @@ export const metadata: Metadata = {
     "web developer",
     "WordPress developer",
     "Wix developer",
-    "freelance developer",
+    "no-code web development",
     "advertisement",
     "brand design",
     "logo design",
     "Animesh Kumar",
+    "agency",
   ],
-  authors: [{ name: "Animesh Kumar", url: siteUrl }],
-  creator: "Animesh Kumar",
-  publisher: "Animesh Kumar",
+  authors: [{ name: "Aniixdigital (Animesh Kumar, Founder)", url: siteUrl }],
+  creator: "Aniixdigital",
+  publisher: "Aniixdigital",
   formatDetection: {
     email: false,
     address: false,
@@ -60,22 +62,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Animesh Kumar Portfolio",
-    title: "Animesh Kumar | Digital Marketing & Web Development Expert",
-    description: "Transform your business with expert digital marketing, web development, graphic design, and advertisement services. 50+ projects completed with 100% client satisfaction.",
+    siteName: "Aniixdigital",
+    title: "Aniixdigital | Digital Marketing, Graphic Design & No-Code Web Development",
+    description: "Grow your business with Aniixdigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. 50+ projects completed with 100% client satisfaction.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Animesh Kumar - Digital Marketing & Web Development Portfolio",
+        alt: "Aniixdigital - Digital Marketing, Graphic Design & No-Code Web Development",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Animesh Kumar | Digital Marketing & Web Development Expert",
-    description: "Transform your business with expert digital marketing, web development, graphic design, and advertisement services.",
+    title: "Aniixdigital | Digital Marketing, Graphic Design & No-Code Web Development",
+    description: "Grow your business with Aniixdigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar.",
     images: ["/og-image.png"],
     creator: "@aniixdigital",
   },
@@ -99,22 +101,22 @@ export const metadata: Metadata = {
 // JSON-LD Structured Data
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Animesh Kumar',
+  '@type': 'Organization',
+  name: 'Aniixdigital',
   url: siteUrl,
-  image: `${siteUrl}/og-image.png`,
+  logo: `${siteUrl}/og-image.png`,
   sameAs: [
     'https://www.linkedin.com/in/aniixdigital',
     'https://www.instagram.com/aniixdigital',
     'https://www.facebook.com/aniixdigital',
   ],
-  jobTitle: 'Digital Marketing Expert & Web Developer',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Freelance',
+  founder: {
+    '@type': 'Person',
+    name: 'Animesh Kumar',
+    url: siteUrl,
   },
-  description: 'Skilled digital marketer and web developer specializing in SEO, social media marketing, web development, graphic design, and advertisement services.',
-  knowsAbout: ['Digital Marketing', 'Web Development', 'Graphic Design', 'SEO', 'Social Media Marketing', 'Advertisement'],
+  description: 'Aniixdigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.',
+  knowsAbout: ['Digital Marketing', 'Web Development', 'Graphic Design', 'SEO', 'Social Media Marketing', 'No-Code Web Development', 'Advertisement'],
 };
 
 export default function RootLayout({

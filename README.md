@@ -2,7 +2,7 @@
 
 Your personal portfolio website to showcase your digital marketing expertise, web development projects, graphic design work, and advertisement campaigns.
 
-🌐 **Live Site:** [aniixdigital.com](https://aniixdigital.com)
+🌐 **Live Site:** [www.aniixdigital.com](https://www.aniixdigital.com)
 
 ---
 

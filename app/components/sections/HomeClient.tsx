@@ -32,7 +32,7 @@ export default function HomeClient({ children }: { children: React.ReactNode }) 
 
       gsap.fromTo(
         ".services-section",
-        { opacity: 0.7, scale: 0.9, borderRadius: "40px" },
+        { opacity: 0.7, scale: isMobile ? 1 : 0.9, borderRadius: "40px" },
         {
           opacity: 1,
           scale: 1,
