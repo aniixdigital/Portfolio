@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Urbanist,Poppins } from "next/font/google";
+import { Urbanist, Poppins } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
@@ -10,8 +10,8 @@ const urbanist = Urbanist({
   display: 'swap',
 });
 
-const poppins= Poppins({
-  weight: ['300','400','600','700'],
+const poppins = Poppins({
+  weight: ['300', '400', '600', '700'],
   variable: "--font-poppins",
   subsets: ['latin'],
   display: 'swap',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     default: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
     template: "%s | AniixDigital",
   },
-  description: "Aniixdigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.",
+  description: "AniixDigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.",
   keywords: [
     "aniixdigital",
     "digital marketing",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     "Animesh Kumar",
     "agency",
   ],
-  authors: [{ name: "Aniixdigital (Animesh Kumar, Founder)", url: siteUrl }],
-  creator: "Aniixdigital",
-  publisher: "Aniixdigital",
+  authors: [{ name: "AniixDigital (Animesh Kumar, Founder)", url: siteUrl }],
+  creator: "AniixDigital",
+  publisher: "AniixDigital",
   formatDetection: {
     email: false,
     address: false,
@@ -66,20 +66,20 @@ export const metadata: Metadata = {
     title: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
     description: "Grow your business with AniixDigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. 50+ projects completed with 100% client satisfaction.",
     images: [
-          {
-            url: "/og-image.jpg",
-            width: 1200,
-            height: 630,
-            alt: "AniixDigital - Digital Marketing, Graphic Design & No-Code Web Development",
-          },
-        ],
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AniixDigital - Digital Marketing, Graphic Design & No-Code Web Development",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
     description: "Grow your business with AniixDigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar.",
-    images: ["/og-image.png"],
-      images: ["/og-image.jpg"],
+
+    images: ["/og-image.jpg"],
     creator: "@aniixdigital",
   },
   robots: {
@@ -103,10 +103,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Aniixdigital',
+  name: 'AniixDigital',
   url: siteUrl,
-  logo: `${siteUrl}/og-image.png`,
-    logo: `${siteUrl}/og-image.jpg`,
+
+  logo: `${siteUrl}/og-image.jpg`,
   sameAs: [
     'https://www.linkedin.com/in/aniixdigital',
     'https://www.instagram.com/aniixdigital',
@@ -117,7 +117,7 @@ const jsonLd = {
     name: 'Animesh Kumar',
     url: siteUrl,
   },
-  description: 'Aniixdigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.',
+  description: 'AniixDigital is a digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. Expert SEO, branding, and creative solutions for your business.',
   knowsAbout: ['Digital Marketing', 'Web Development', 'Graphic Design', 'SEO', 'Social Media Marketing', 'No-Code Web Development', 'Advertisement'],
 };
 
@@ -129,7 +129,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/favicon-new.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
