@@ -66,19 +66,20 @@ export const metadata: Metadata = {
     title: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
     description: "Grow your business with AniixDigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar. 50+ projects completed with 100% client satisfaction.",
     images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "AniixDigital - Digital Marketing, Graphic Design & No-Code Web Development",
-      },
-    ],
+          {
+            url: "/og-image.jpg",
+            width: 1200,
+            height: 630,
+            alt: "AniixDigital - Digital Marketing, Graphic Design & No-Code Web Development",
+          },
+        ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AniixDigital | Digital Marketing, Graphic Design & No-Code Web Development",
     description: "Grow your business with AniixDigital: digital marketing, graphic design, and no-code web development agency founded by Animesh Kumar.",
     images: ["/og-image.png"],
+      images: ["/og-image.jpg"],
     creator: "@aniixdigital",
   },
   robots: {
@@ -105,6 +106,7 @@ const jsonLd = {
   name: 'Aniixdigital',
   url: siteUrl,
   logo: `${siteUrl}/og-image.png`,
+    logo: `${siteUrl}/og-image.jpg`,
   sameAs: [
     'https://www.linkedin.com/in/aniixdigital',
     'https://www.instagram.com/aniixdigital',
